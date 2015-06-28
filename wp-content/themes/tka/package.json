@@ -1,0 +1,28 @@
+{
+  "name": "fresh",
+  "description": "A fresh boilerplate for bespoke web projects.",
+  "version": "0.1.0",
+  "author": "Refresh Media",
+  "private": true,
+  "devDependencies": {
+    "grunt": "~0.4.4",
+    "grunt-autoprefixer": "^3.0.3",
+    "grunt-coffeelint": "*",
+    "grunt-concurrent": "*",
+    "grunt-contrib-clean": "*",
+    "grunt-contrib-coffee": "*",
+    "grunt-contrib-compass": "*",
+    "grunt-contrib-concat": "*",
+    "grunt-contrib-copy": "*",
+    "grunt-contrib-jshint": "*",
+    "grunt-contrib-jst": "^0.6.0",
+    "grunt-contrib-uglify": "*",
+    "grunt-contrib-watch": "*",
+    "grunt-newer": "*",
+    "grunt-scss-lint": "^0.3.6",
+    "grunt-sync": "0.0.7",
+    "jshint-stylish": "~0.2.0",
+    "load-grunt-config": "*",
+    "load-grunt-tasks": "^1.0.0"
+  }
+}
