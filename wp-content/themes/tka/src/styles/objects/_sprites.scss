@@ -1,0 +1,34 @@
+/* ==============================================
+   Sprites
+============================================== */
+
+/**
+ * Compass sprite setup for convenient automatic sprites
+ *
+   `@import "icons/*.png;"
+ *
+ *
+ * Useful functions:
+ *
+ * Extend the icon sprite background-image selector:
+ *
+   `@extend .icons-sprite;`
+ *
+ * Include the background position of a given
+ * image with optional nudging:
+ *
+   `@include sprite-background-position($icons-sprites, "image_name");`
+   `@include sprite-background-position($icons-sprites, "image_name", 4px, 4px);`
+ *
+ * Change the layout of your sprite map with these options
+   `diagnoal, horizontal, vertical, smart`
+   `$icons-layout: diagonal;`
+ *
+ * Add transparent spacing around images.
+ * Cannot be used with smart layouts
+   `$icons-spacing: 20px;`
+ *
+ */
+
+$icons-layout: smart;
+// @import "icons/*.png";

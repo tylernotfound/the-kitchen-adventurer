@@ -1,0 +1,40 @@
+/* ==============================================
+   Structure
+============================================== */
+
+/**
+ * Common page layout structure elements designed for rapid responsive development.
+ */
+.container {
+  margin-right: $page-gutter-min;
+  margin-left: $page-gutter-min;
+
+  @include breakpoint('mobile-only') {
+    margin-right: $page-gutter-mobile;
+    margin-left: $page-gutter-mobile;
+  }
+
+  @include breakpoint('tablet-up') {
+    width: $container-tablet;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  @include breakpoint('desktop-up') {
+    max-width: $container-desktop;
+    width: auto;
+  }
+}
+
+// Container size variations
+.container--med {
+  max-width: $container-desktop;
+}
+
+.container--small {
+  max-width: $container-tablet;
+}
+
+.container--micro {
+  max-width: $container-mobile;
+}

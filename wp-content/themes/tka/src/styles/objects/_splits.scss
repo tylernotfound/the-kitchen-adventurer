@@ -1,0 +1,74 @@
+/* ==============================================
+   Split
+============================================== */
+
+/**
+ * Set up the splits with two variations, `.split--tablet` and `.split--desktop`.
+ * The variation splits will upack faster than regualar `.split` elements, which is
+ * useful when used with larger images.
+ *
+ * The mixin can be reused to create custom splits for different breakpoints:
+ *
+   .split--widescreen {
+     @include breakpoint('widescreen') {
+       @include split(50px);
+     }
+   }
+ *
+ */
+@mixin split($margin-unit) {
+  .split__asset {
+    float: left;
+    margin: 0 $margin-unit $margin-unit 0;
+  }
+
+  .split__asset--right {
+    float: right;
+    margin: 0 0 $margin-unit $margin-unit;
+  }
+}
+
+.split {
+  @extend %cf;
+  @include split($split-margin);
+}
+
+.split__asset,
+.split__asset--right {
+  display: block;
+}
+
+.split__body {
+  overflow: hidden;
+}
+
+
+/**
+ * Breakpoint variations for tablet, desktop, and max.
+ */
+.split--tablet,
+.split--desktop,
+.split--max {
+  @extend %cf;
+
+  .split__asset,
+  .split__asset--right {text-align: center;}
+}
+
+.split--tablet {
+  @include breakpoint('tablet-up') {
+    @include split($split-margin-tablet);
+  }
+}
+
+.split--desktop {
+  @include breakpoint('desktop-up', true) {
+    @include split($split-margin-desktop);
+  }
+}
+
+.split--max {
+  @include breakpoint('max-only', true) {
+    @include split($split-margin-max);
+  }
+}

@@ -1,0 +1,13 @@
+/* ==============================================
+   Functions
+============================================== */
+
+/**
+ * Shorthand for local image url path for use in backgrounds.
+ *
+   `background: image-url("arrow.png") no-repeat 0 0;`
+ *
+ */
+@function image-url($filename) {
+  @return url($image-path + $filename);
+}

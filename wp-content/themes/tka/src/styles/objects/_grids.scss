@@ -1,0 +1,231 @@
+/* ==============================================
+   Grid
+============================================== */
+
+/**
+ * Responsive grid system that allows for the creation of flexible, mobile-first grids.
+ *
+ * Example Grid:
+ *
+    <div class="grid thirds">
+      <div class="grid__item">
+        ...
+      </div>
+      <div class="grid__item">
+        ...
+      </div>
+      <div class="grid__item">
+        ...
+      </div>
+    </div>
+ *
+ */
+
+
+.grid {
+  list-style: none;
+}
+
+.grid__item {
+  width: 100%;
+  margin-bottom: $grid-vertical-spacing;
+}
+
+
+/**
+ * Reverse Grids
+ *
+ * This hack behavior will slip a grid item above the rest,
+ * working best with single row grids.
+ */
+@include breakpoint('mobile-down') {
+  .grid--reverse {display: table;
+    .grid__item--top {display: table-header-group;}
+  }
+}
+
+
+@mixin grid-setup($breakpoint: '') {
+
+  @if $breakpoint != '' {
+    $breakpoint: "--#{$breakpoint}";
+  }
+
+  /**
+   * Whole grid items, using `!important` so these
+   * styles win regardless of its containing grid.
+   */
+  // scss-lint:disable ImportantRule
+  .grid__whole#{$breakpoint} {
+    width: 100% !important;
+  }
+
+  /**
+   * Halves
+   */
+  .halves#{$breakpoint} > {
+    .grid__item {width: 50%;}
+    .grid__push {margin-left: 50%;}
+  }
+
+  .thirds#{$breakpoint} > {
+    .grid__item {width: 33.33%;}
+    .grid__item--2-3 {width: 66.66%;}
+    .grid__push {margin-left: 33.33%;}
+    .grid__push--2-3 {margin-left: 66.66%;}
+  }
+
+  .fourths#{$breakpoint} > {
+    .grid__item {width: 25%;}
+    .grid__item--2-4 {width: 50%;}
+    .grid__item--3-4 {width: 75%;}
+  }
+
+  .fifths#{$breakpoint} > {
+    .grid__item {width: 20%;}
+    .grid__item--2-5 {width: 40%;}
+    .grid__item--3-5 {width: 60%;}
+    .grid__item--4-5 {width: 80%;}
+  }
+
+  .sixths#{$breakpoint} > {
+    .grid__item {width: 16.66%;}
+    .grid__item--2-6 {width: 33.32%;}
+    .grid__item--3-6 {width: 49.98%;}
+    .grid__item--4-6 {width: 66.64%;}
+    .grid__item--5-6 {width: 83.3%;}
+  }
+
+}
+
+
+/**
+ * Mobile first grids, where grids do not exist below tablet size.
+ *
+ * [1] - Inline-block whitespace remedy
+ */
+@include breakpoint('tablet-up', true) {
+  /**
+   * Create the baseline grid.
+   */
+  @include grid-setup();
+
+
+  .grid {
+    margin-left: $grid-gutter * -1;
+    font-size: 0;                       /* [1] */
+  }
+
+  .grid__item {
+    display: inline-block;
+    vertical-align: top;
+    padding-left: $grid-gutter;
+    font-size: $base-size;
+  }
+
+  /**
+   * Grid Rows
+   *
+   * Should be expected to consume only one row
+   * and therefore not have margins on item elements.
+   */
+  .grid-row {
+    > .grid__item {
+      margin-bottom: 0;
+    }
+  }
+
+
+  /**
+   * Tight grids will contain smaller/no gutters.
+   */
+  .grid--tight {
+    margin-left: $grid-tight-gutter * -1;
+
+    > .grid__item {
+      margin-bottom: $grid-tight-vertical-spacing;
+      padding-left: $grid-tight-gutter;
+    }
+  }
+
+
+  /**
+   * Whole grid items, using `!important` so these
+   * styles win regardless of its containing grid.
+   */
+  // scss-lint:disable ImportantRule
+  .grid__whole {
+    width: 100% !important;
+  }
+
+
+  /**
+   * Medium Grid Spacing Varient
+   */
+  .grid--med {
+    margin-left: $grid-med-gutter * -1;
+
+    > .grid__item {
+      padding-left: $grid-med-gutter;
+    }
+  }
+
+
+  /**
+   * Large Grid Spacing Varient
+   */
+  .grid--lrg {
+    margin-left: $grid-lrg-gutter * -1;
+
+    > .grid__item {
+      padding-left: $grid-lrg-gutter;
+    }
+  }
+}
+
+
+/**
+ * Tablet Grid
+ */
+@include breakpoint('tablet-only') {
+  @include grid-setup('tablet');
+}
+
+/**
+ * Desktop Grid
+ */
+@include breakpoint('desktop-up', true) {
+  @include grid-setup('desktop');
+}
+
+/**
+ * Max Grid
+ */
+@include breakpoint('max-only', true) {
+  @include grid-setup('max');
+}
+
+
+/**
+ * Mobile Only Grid
+ *
+ * Useful for persisting grids down to mobile sizes
+ * in a mobile-first stylesheet.
+ *
+ * [1] - Inline-block whitespace remedy
+ */
+@include breakpoint('mobile-down') {
+  @include grid-setup('mobile');
+
+  .grid--mobile {
+    margin-left: $grid-gutter * -1;
+    font-size: 0;                       /* [1] */
+
+    > .grid__item {
+      display: inline-block;
+      vertical-align: top;
+      padding-left: $grid-gutter;
+      font-size: $base-size;
+    }
+  }
+}

@@ -1,0 +1,93 @@
+/* ==============================================
+ * HELPERS
+ * ============================================== */
+
+
+/**
+ * Display helpers based on media queries
+ *
+   `@extend %show--mobile-only;`
+ *
+ */
+.hidden,
+%hidden {
+  display: none;
+}
+
+@each $breakpoint in $breakpoints {
+  $state: nth($breakpoint, 1);
+
+  .show--#{$state},
+  %show--#{$state} {
+    @extend %hidden;
+
+    @include breakpoint(#{$state}) {
+      display: inherit;
+    }
+  }
+}
+
+
+/**
+ * Micro clearfix, as per: css-101.org/articles/clearfix/latest-new-clearfix-so-far.php
+ * Extend the clearfix class with Sass to avoid the `.cf` class appearing over markup
+ *
+   `@extend %cf;`
+ *
+ */
+.cf,
+%cf {
+  &:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
+
+/**
+ * Image replacement technique to hide text when adding a background image.
+ * This technique is favorable over `text-indent: -9999px;` because we avoid
+ * drawing very wide boxes to accomodate the indent.
+ *
+ * Note: IE10 does not like the use of the image technique with pseudo elements
+ *       that do not have a declared height. An example of this would be
+ *       problems with CSS arrow pseudo elements with parents that contain text.
+ *
+   `@extend %ir;`
+ *
+ */
+.ir,
+%ir {
+  border: 0;
+  overflow: hidden;
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+
+  &:before {
+    content: '';
+    display: block;
+    width: 0;
+    height: 100%;
+  }
+}
+
+
+/**
+ * Visually hide elements, but allow them to be read by screen readers.
+ *
+   `@extend %vh;`
+ *
+ */
+.vh,
+%vh {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}

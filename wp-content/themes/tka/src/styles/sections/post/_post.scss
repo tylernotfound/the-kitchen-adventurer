@@ -1,0 +1,134 @@
+/* ==============================================
+   Post Detail
+============================================== */
+
+
+.entry-header {
+  margin: 0 0 34px;
+  text-align: center;
+}
+
+.entry-content {
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  p {
+    margin: 0 0 24px;
+    font-size: 18px;
+  }
+}
+
+
+/* Post Share
+------------------------------------ */
+.post-share {
+  margin: 40px 0 0;
+  text-align: center;
+}
+
+.post-share__item {
+  display: block;
+  margin: 0 0 16px;
+
+  @include breakpoint('tablet-up') {
+    display: inline-block;
+    vertical-align: middle;
+    height: 40px;
+    margin: 0 0 0 14px;
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+}
+
+.post-share__label {
+  @extend .zeta;
+  line-height: 1.7;
+}
+
+
+/* Post Nav
+------------------------------------ */
+.post-nav {
+  @extend %cf;
+  margin: 80px 0 20px;
+
+  &.is-single {
+    text-align: center;
+  }
+
+  .zeta {
+    margin: -8px 0 6px;
+    color: #777;
+  }
+
+  .alpha {
+    font-size: 21px;
+    line-height: 1.3;
+  }
+}
+
+.post-nav__item {
+  position: relative;
+  height: 128px;
+  padding: 20px 20px 20px 113px;
+  border: 1px solid #efefef;
+  overflow: hidden;
+  border-radius: 3px;
+  box-shadow: 0 1px 0 #eee;
+  transition: all .2s ease;
+
+  @include breakpoint('tablet-up') {
+    width: 48%;
+  }
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 3px 6px #e9e9e9;
+  }
+
+  .post-nav.is-single & {
+    display: inline-block;
+    float: none;
+    width: 65%;
+  }
+}
+
+.post-nav__previous {
+  text-align: left;
+
+  @include breakpoint('tablet-up') {
+    float: left;
+  }
+}
+
+.post-nav__next {
+  margin: 20px 0 0;
+  padding: 20px 113px 20px 20px;
+  text-align: right;
+
+  @include breakpoint('tablet-up') {
+    float: right;
+    margin: 0;
+  }
+}
+
+.post-nav__empty {
+  padding: 0;
+}
+
+.post-nav__photo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 98px;
+  height: auto;
+
+  .post-nav__next & {
+    right: 0;
+    left: inherit;
+  }
+}

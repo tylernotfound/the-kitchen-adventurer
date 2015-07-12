@@ -1,0 +1,33 @@
+/* ==============================================
+   Buttons
+============================================== */
+
+.btn {
+  @extend .colorize-bg;
+
+  display: inline-block;
+  vertical-align: middle;
+  padding: 14px 20px;
+  border: 0;
+  // border: 1px solid;
+  // background: #fff;
+  font-family: $sans-family;
+  font-size: 12px;
+  font-weight: 500;
+  color: #fff;
+  text-transform: uppercase;
+  white-space: nowrap;
+  cursor: pointer;
+  border-radius: 35px;
+
+  // &:hover {
+  //   @extend .colorize-bg;
+  //   color: #fff;
+  // }
+
+  &:active,
+  &:focus {
+    outline: none;
+    transform: translateY(1px);
+  }
+}

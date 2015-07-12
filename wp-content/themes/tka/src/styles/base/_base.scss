@@ -1,0 +1,38 @@
+/* ==============================================
+   Base
+============================================== */
+
+/**
+ * General font rules
+ *
+ * [1] - Disabling text-rendering until it is safe to use.
+ */
+html,
+button,
+input,
+select,
+textarea {
+  font-family: $font-family;
+  font-style: normal;
+  font-size: $base-size;
+  font-weight: 300;
+  color: $primary-color;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+
+/**
+ * [1] - Remove gap below images
+ * [2] - Prevent images from exceding their containers
+ */
+img {
+  vertical-align: middle;   /* [1] */
+  max-width: 100%;          /* [2] */
+}
+
+
+a {
+  text-decoration: none;
+}

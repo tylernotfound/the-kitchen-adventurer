@@ -1,0 +1,93 @@
+/* ==============================================
+   Default Variables
+============================================== */
+
+
+$image-path: "../../img/"!default;
+
+
+/* Media Query Breakpoints
+------------------------------------ */
+$bp-min: 480px!default;
+$bp-mobile: 718px!default;
+$bp-tablet: 1024px!default;
+$bp-desktop: 1296px!default;
+$bp-max: 1550px!default;
+
+
+/* Container Sizes
+------------------------------------ */
+$container-max: 1016px!default;
+$container-desktop: 868px!default;
+$container-tablet: 680px!default;
+$container-mobile: 424px!default;
+$container-min: 276px!default;
+
+
+/* Typography
+------------------------------------ */
+$font-family: "Helvetica", "Arial", sans-serif!default;
+$primary-color: #222!default;
+$base-size: 16px!default;
+
+
+/* Grids
+------------------------------------ */
+$grid-gutter: 20px!default;
+$grid-vertical-spacing: 20px!default;
+// Variations
+$grid-med-gutter: 40px!default;
+$grid-lrg-gutter: 60px!default;
+$grid-tight-gutter: 0!default;
+$grid-tight-vertical-spacing: 0!default;
+
+
+/* Sidebars
+------------------------------------ */
+$sidebar-left-width: 280px!default;
+$sidebar-left-gutter: 80px!default;
+$sidebar-right-width: 280px!default;
+$sidebar-right-gutter: 80px!default;
+
+
+/* Objects
+------------------------------------ */
+// Splits
+$split-margin: 10px!default;
+$split-margin-tablet: 20px!default;
+$split-margin-desktop: 32px!default;
+$split-margin-max: 40px!default;
+
+// Flags
+$flag-spacing: 30px!default;
+$flag-spacing-tablet: 30px!default;
+$flag-spacing-desktop: 30px!default;
+$flag-spacing-max: 40px!default;
+
+
+/* Forms
+------------------------------------ */
+$placeholder-color: #999!default;
+
+
+/* Visual consistency
+------------------------------------ */
+$radius: 3px!default;
+
+
+/* Overlays
+------------------------------------ */
+$use-overlays: true!default;
+$overlay-max-width: 800px!default;
+$overlay-max-height: 500px!default;
+
+
+/* Z-index layers
+------------------------------------ */
+$z0: 0;
+$z1: 10;
+$z2: 20;
+$z3: 30;
+$z4: 40;
+$z5: 50;
+$z6: 60;

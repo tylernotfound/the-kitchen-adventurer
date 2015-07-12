@@ -1,0 +1,16 @@
+/* ==============================================
+   Chunks
+============================================== */
+
+
+.chunk {
+  padding: 70px 0;
+
+  @include breakpoint('tablet-up') {
+    padding: 100px 0;
+  }
+}
+
+.chunk--highlight {
+  background: #f5f6fa;
+}

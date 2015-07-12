@@ -1,0 +1,156 @@
+/* ==============================================
+   Colorizer
+============================================== */
+
+
+$colorize-timing: 4s;
+
+.colorize-text {
+  transition: color $colorize-timing ease, border-color $colorize-timing ease;
+}
+
+.colorize-bg,
+.colorize-bg-alt {
+  transition: background $colorize-timing ease;
+}
+
+
+body[data-color="1"] {
+  .colorize-text {
+    color: $colorizer-1-text;
+  }
+
+  .colorize-bg {
+    background: $colorizer-1;
+  }
+
+  .colorize-bg-alt {
+    background: $colorizer-1-alt;
+  }
+}
+
+body[data-color="2"] {
+  .colorize-text {
+    color: $colorizer-2;
+  }
+
+  .colorize-bg {
+    background: $colorizer-2;
+  }
+
+  .colorize-bg-alt {
+    background: $colorizer-2-alt;
+  }
+}
+
+body[data-color="3"] {
+  .colorize-text {
+    color: $colorizer-3-text;
+  }
+
+  .colorize-bg {
+    background: $colorizer-3;
+  }
+
+  .colorize-bg-alt {
+    background: $colorizer-3-alt;
+  }
+}
+
+body[data-color="4"] {
+  .colorize-text {
+    color: $colorizer-4-text;
+  }
+
+  .colorize-bg {
+    background: $colorizer-4;
+  }
+
+  .colorize-bg-alt {
+    background: $colorizer-4-alt;
+  }
+}
+
+body[data-color="5"] {
+  .colorize-text {
+    color: $colorizer-5-text;
+  }
+
+  .colorize-bg {
+    background: $colorizer-5;
+  }
+
+  .colorize-bg-alt {
+    background: $colorizer-5-alt;
+  }
+}
+
+body[data-color="6"] {
+  .colorize-text {
+    color: $colorizer-6-text;
+  }
+
+  .colorize-bg {
+    background: $colorizer-6;
+  }
+
+  .colorize-bg-alt {
+    background: $colorizer-6-alt;
+  }
+}
+
+body[data-color="7"] {
+  .colorize-text {
+    color: $colorizer-7-text;
+  }
+
+  .colorize-bg {
+    background: $colorizer-7;
+  }
+
+  .colorize-bg-alt {
+    background: $colorizer-7-alt;
+  }
+}
+
+body[data-color="8"] {
+  .colorize-text {
+    color: $colorizer-8-text;
+  }
+
+  .colorize-bg {
+    background: $colorizer-8;
+  }
+
+  .colorize-bg-alt {
+    background: $colorizer-8-alt;
+  }
+}
+
+body[data-color="9"] {
+  .colorize-text {
+    color: $colorizer-9-text;
+  }
+
+  .colorize-bg {
+    background: $colorizer-9;
+  }
+
+  .colorize-bg-alt {
+    background: $colorizer-9-alt;
+  }
+}
+
+body[data-color="10"] {
+  .colorize-text {
+    color: $colorizer-10-text;
+  }
+
+  .colorize-bg {
+    background: $colorizer-10;
+  }
+
+  .colorize-bg-alt {
+    background: $colorizer-10-alt;
+  }
+}

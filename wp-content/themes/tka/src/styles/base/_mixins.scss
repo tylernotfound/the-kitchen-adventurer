@@ -1,0 +1,109 @@
+/* ==============================================
+   Mixins
+============================================== */
+
+
+/* Media Queries
+------------------------------------ */
+
+/**
+ * Breakpoint mixin to easily add media query driven styles
+ * inline with given style delcaration blocks.
+ *
+ * $breakpoints variable is used in helper classes to create
+ * namespaced modifiers to classes. It should reflect the
+ * breakpoints available in `include breakpoint()`.
+ * The variable is declared in this file for clarity.
+ */
+$breakpoints: min-only "(max-width: #{$bp-min})",
+              mobile-down "(max-width: #{$bp-mobile})",
+              mobile-only "(min-width: #{$bp-min + 1}) and (max-width: #{$bp-mobile})",
+              mobile-up "(min-width: #{$bp-min + 1})",
+              tablet-down "(max-width: #{$bp-tablet})",
+              tablet-only "(min-width: #{$bp-mobile + 1}) and (max-width: #{$bp-tablet})",
+              tablet-up "(min-width: #{$bp-mobile + 1})",
+              desktop-up "(min-width: #{$bp-tablet + 1})",
+              desktop-only "(min-width: #{$bp-tablet + 1}) and (max-width: #{$bp-max})",
+              widescreen-up "(min-width: #{$bp-desktop + 1})",
+              widescreen-only "(min-width: #{$bp-desktop + 1}) and (max-width: #{$bp-max})",
+              max-only "(min-width: #{$bp-max})";
+
+@mixin breakpoint($media, $ie-include: false) {
+  @each $breakpoint in $breakpoints {
+    $state: nth($breakpoint, 1);
+    $condition: nth($breakpoint, 2);
+
+    @if $media == $state {
+      @media only screen and #{$condition} {
+        @content;
+      }
+    }
+  }
+}
+
+
+@mixin retina() {
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    @content;
+  }
+}
+
+
+
+/* Typography
+------------------------------------ */
+
+/**
+ * Force overly long spans of text to truncate on a given boundary.
+ *
+   `@include truncate(400px);`
+ *
+ */
+@mixin truncate($boundary: 100%) {
+  max-width: $boundary;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+
+/* Box Model and Layout
+------------------------------------ */
+
+/**
+ * Make CSS Arrows!
+ * Provide a direction, overall size, arrow stretch (e.g. length)
+ * and color values to turn an element into an arrow.
+ *
+   `@include make-arrow("left", 10px, 15px, #fff);
+ *
+ */
+@mixin make-arrow($dir, $size, $stretch, $color) {
+  width: 0;
+  height: 0;
+  @if $dir == 'top' {
+    border-top: 0;
+    border-right: $size solid transparent;
+    border-bottom: $stretch solid $color;
+    border-left: $size solid transparent;
+  }
+  @if $dir == 'right' {
+    border-top: $size solid transparent;
+    border-right: 0;
+    border-bottom: $size solid transparent;
+    border-left: $stretch solid $color;
+  }
+  @if $dir == 'bottom' {
+    border-top: $stretch solid $color;
+    border-right: $size solid transparent;
+    border-bottom: 0;
+    border-left: $size solid transparent;
+  }
+  @if $dir == 'left' {
+    border-top: $size solid transparent;
+    border-right: $stretch solid $color;
+    border-bottom: $size solid transparent;
+    border-left: 0;
+  }
+}

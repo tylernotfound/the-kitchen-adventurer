@@ -1,0 +1,95 @@
+/* ==============================================
+   Flag
+============================================== */
+
+
+/**
+ * Set up the flags with breakpoint variations, `.flag--tablet`, `.flag--desktop`, etc.
+ *
+ * The mixin can be reused to create custom flags for different breakpoints:
+ *
+   .flag--widescreen {
+     @include breakpoint("widescreen") {
+       @include flag(50px);
+     }
+   }
+ *
+ */
+
+// Context is the parent .flag element
+@mixin flag($spacing-unit) {
+  display: table; width: 100%;
+
+  .flag__asset,
+  .flag__body {
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  &.flag--top {
+    .flag__asset,
+    .flag__body {
+      vertical-align: top;
+    }
+  }
+
+  &.flag--bottom {
+    .flag__asset,
+    .flag__body {
+      vertical-align: bottom;
+    }
+  }
+
+  .flag__asset {
+    margin: 0;
+    padding-right: $spacing-unit;
+    text-align: left;
+
+    img {
+      display: block;
+      max-width: none;
+    }
+  }
+
+  &.flag--rev {
+    .flag__asset {
+      padding-right: 0;
+      padding-left: $spacing-unit;
+    }
+  }
+}
+
+
+// Flag general styles
+.flag__asset {
+  margin: 0 0 15px;
+  text-align: center;
+}
+
+.flag__body {
+  width: 100%;
+}
+
+
+// Flag object instantiation
+.flag {
+  @include flag($flag-spacing);
+}
+
+.flag--tablet {
+  @include breakpoint('tablet-up') {
+    @include flag($flag-spacing-tablet);
+  }
+}
+
+.flag--desktop {
+  @include breakpoint('desktop-up', true) {
+    @include flag($flag-spacing-desktop);
+  }
+}
+
+.flag--max {
+  @include breakpoint('max-only', true) {
+    @include flag($flag-spacing-max);
+  }
+}

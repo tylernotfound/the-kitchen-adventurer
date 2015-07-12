@@ -1,0 +1,61 @@
+/* ==============================================
+   Responsive Sidebar
+============================================== */
+
+
+/**
+ * Fixed sidebar with a flexible content area. This pattern is useful for content folding
+ * where the sidebar needs to wrap under the content area, and retain natural sizing.
+ *
+   <div class='has-sidebar'>
+     <div class='has-sidebar__content'>
+       ...
+     </div>
+     <div class='has-sidebar__sidebar'>
+       ...
+     </div>
+   </div>
+ *
+ */
+.has-sidebar,
+.has-sidebar--left {
+  @extend %cf;
+}
+
+.has-sidebar__sidebar {
+  margin-top: 50px;
+}
+
+@include breakpoint('desktop-up', true) {
+  .has-sidebar {
+    padding-right: $sidebar-right-width + $sidebar-right-gutter;
+  }
+
+  .has-sidebar__sidebar {
+    float: left;
+    width: $sidebar-right-width;
+    margin-top: 0;
+    margin-right: -100%;
+    margin-left: $sidebar-right-gutter;
+  }
+
+  .has-sidebar__content {
+    float: left;
+    width: 100%;
+  }
+
+  .has-sidebar--left {
+    padding-left: $sidebar-left-width + $sidebar-left-gutter;
+
+    .has-sidebar__sidebar {
+      float: right;
+      width: $sidebar-left-width;
+      margin-right: $sidebar-left-gutter;
+      margin-left: -100%;
+    }
+
+    .has-sidebar__content {
+      float: right;
+    }
+  }
+}

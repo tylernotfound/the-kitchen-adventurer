@@ -1,0 +1,168 @@
+/* ==============================================
+   Cards
+============================================== */
+
+
+.cards {
+  margin-right: $page-gutter-min;
+  margin-left: $page-gutter-min;
+
+  @include breakpoint('mobile-only') {
+    margin-right: $page-gutter-mobile;
+    margin-left: $page-gutter-mobile;
+  }
+
+  @include breakpoint('desktop-up') {
+    margin: 0;
+  }
+}
+
+
+/* Card
+------------------------------------ */
+.grid-sizer {
+  width: 100%;
+
+  @include breakpoint('mobile-only') {
+    width: 48%;
+  }
+
+  @include breakpoint('tablet-up') {
+    width: 32%;
+  }
+
+  @include breakpoint('desktop-up') {
+    width: 48%;
+  }
+
+  @include breakpoint('widescreen-up') {
+    width: 32%;
+  }
+}
+
+.gutter-sizer {
+  width: 0%;
+
+  @include breakpoint('mobile-only') {
+    width: 4%;
+  }
+
+  @include breakpoint('tablet-up') {
+    width: 2%;
+  }
+
+  @include breakpoint('desktop-up') {
+    width: 4%;
+  }
+
+  @include breakpoint('widescreen-up') {
+    width: 2%;
+  }
+}
+
+.card {
+  margin-bottom: 30px;
+  box-shadow: 0 1px 1px #e7e7e7;
+
+  // @include breakpoint('tablet-up') {
+  //   // width: 32%;
+  //   width: 46%;
+  //   margin-bottom: 4%;
+  // }
+
+  // @include breakpoint('widescreen-up') {
+  //   width: 32%;
+  //   margin-bottom: 2%;
+
+  // }
+
+  @include breakpoint('mobile-only') {
+    width: 48%;
+    margin-bottom: 4%;
+  }
+
+  @include breakpoint('tablet-up') {
+    width: 32%;
+    margin-bottom: 2%;
+  }
+
+  @include breakpoint('desktop-up') {
+    width: 48%;
+    margin-bottom: 4%;
+  }
+
+  @include breakpoint('widescreen-up') {
+    width: 32%;
+    margin-bottom: 2%;
+  }
+
+  .meta {
+    margin: -6px 0 18px;
+  }
+}
+
+.card__photo {
+  position: relative;
+  padding-top: 133.4%;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: auto;
+    border-radius: $radius $radius 0 0;
+  }
+}
+
+.card__photo-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.card__body {
+  padding: 32px 28px 0;
+  background: #fff;
+  text-align: center;
+  border-radius: 0 0 $radius $radius;
+
+  p {
+    font-size: 14px;
+    color: #555;
+  }
+}
+
+.card__title {
+  font-style: italic;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 1.3;
+  color: #222;
+
+  a {
+    display: inline-block;
+    color: #000;
+
+    // &:hover {
+    //   background: #f3f3f3;
+    // }
+  }
+}
+
+.card__more {
+  margin: 23px -28px 0;
+  padding: 15px 0 20px;
+  border-top: 1px solid #efefef;
+  font-family: $sans-family;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+
+  a {
+    @extend .colorize-text;
+    display: inline-block;
+    padding-bottom: 1px;
+    // border-bottom: 1px solid;
+    font-size: 11px;
+    font-weight: 400;
+  }
+}

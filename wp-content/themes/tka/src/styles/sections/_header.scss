@@ -1,0 +1,149 @@
+/* ==============================================
+   Page Head
+============================================== */
+
+.page-head {
+  position: relative;
+  text-align: center;
+
+  @include breakpoint('mobile-up') {
+    text-align: right;
+  }
+
+  @include breakpoint('desktop-up') {
+    position: fixed;
+    top: 0;
+    left: 30px;
+    z-index: $z4;
+    width: 160px;
+    text-align: center;
+    will-change: transform;
+  }
+}
+
+
+/* Logo
+------------------------------------ */
+.logo {
+  display: inline-block;
+  padding: 23px 34px;
+
+  @include breakpoint('mobile-up') {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  @include breakpoint('desktop-up') {
+    position: static;
+    padding: 26px 40px;
+  }
+
+  img {
+    display: block;
+    width: 50px;
+    height: auto;
+
+    @include breakpoint('tablet-up') {
+      width: 58px;
+    }
+  }
+}
+
+
+/* Navigation
+------------------------------------ */
+.navigation {
+  padding: 24px 0;
+
+  @include breakpoint('mobile-up') {
+    padding: 30px 0 0;
+  }
+
+  @include breakpoint('desktop-up') {
+    padding: 0;
+  }
+}
+
+.nav {
+  display: inline-block;
+  vertical-align: middle;
+
+  @include breakpoint('desktop-up') {
+    display: block;
+  }
+}
+
+.nav__item {
+  display: inline-block;
+  vertical-align: middle;
+
+  &:first-child {
+    margin-left: 0;
+  }
+
+  // scss-lint:disable ImportantRule
+  a {
+    color: #555 !important;
+  }
+}
+
+
+/* Primary Nav
+------------------------------------ */
+.primary-nav {
+  margin-right: 20px;
+
+  @include breakpoint('desktop-up') {
+    margin: 40px 0;
+  }
+
+  .nav__item {
+    @include breakpoint('mobile-up') {
+      margin-left: 14px;
+
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+
+    @include breakpoint('desktop-up') {
+      display: block;
+      margin: 0 0 28px;
+    }
+  }
+}
+
+.primary-nav__home {
+  display: none;
+
+  @include breakpoint('tablet-up') {
+    display: inline-block;
+  }
+}
+
+
+/* Social Nav
+------------------------------------ */
+.social-nav {
+  .nav__item {
+    margin-left: 20px;
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+}
+
+.more-posts {
+  margin: 40px 0 0;
+  text-align: center;
+
+  .btn {
+    margin: 0 0 0 20px;
+
+    &:first-child {
+      margin: 0;
+    }
+  }
+}

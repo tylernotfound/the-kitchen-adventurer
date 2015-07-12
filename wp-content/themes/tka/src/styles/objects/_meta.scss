@@ -1,0 +1,38 @@
+/* ==============================================
+   Meta
+============================================== */
+
+.meta {
+  margin: 14px 0 0;
+  font-size: 0;
+}
+
+.meta__item {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  font-size: 12px;
+
+  &:before {
+    content: '//';
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 8px;
+    color: #ccc;
+  }
+
+  &:first-child {
+    &:before {
+      display: none;
+    }
+  }
+}
+
+/* Small Variation
+------------------------------------ */
+.meta--small {
+  .meta__item {
+    font-size: 10px;
+    font-weight: 300;
+  }
+}
