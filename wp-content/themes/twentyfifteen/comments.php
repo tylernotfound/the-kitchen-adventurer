@@ -53,6 +53,32 @@ if ( post_password_required() ) {
 		<p class="no-comments"><?php _e( 'Comments are closed.', 'twentyfifteen' ); ?></p>
 	<?php endif; ?>
 
-	<?php comment_form(); ?>
+	<?php
+		$comment_args = array( 'fields' => apply_filters( 'comment_form_default_fields', array(
+    'author' => '<div class="comment-form__wrapper">' .
+    							'<div class="comment-form__field">' .
+		                '<input class="input" name="author" type="text" placeholder="Name" value="' . esc_attr( $commenter['comment_author'] ) . '" aria-required="true" />' .
+	                '</div>',
+    'email'  => '<div class="comment-form__field">' .
+                	'<input class="input" name="email" type="text" placeholder="Email" value="' . esc_attr(  $commenter['comment_author_email'] ) . '" aria-required="true"/>' .
+								'</div>',
+    'url'    => '<div class="comment-form__field">' .
+	                '<input class="input" name="url" type="text" placeholder="Website (optional)" value="' . esc_attr( $commenter['comment_author_url'] ) . '" />' .
+                '</div>',
+     ) ),
+    'comment_field' => '<div class="comment-form__field comment-form__field--comment">' .
+				                 '<textarea class="input" name="comment" placeholder="Comment" aria-required="true"></textarea>' .
+			                 '</div>' .
+			               '</div>',
+    'comment_notes_before' => '',
+    'comment_notes_after' => '',
+    'title_reply' => __(''),
+    'label_submit' => 'Share your thoughts',
+    'class_submit' => 'btn colorize-text'
+	);
+
+	?>
+
+	<?php comment_form($comment_args); ?>
 
 </div><!-- .comments-area -->
