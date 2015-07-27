@@ -13,7 +13,4 @@
   RewriteRule ^(.*)$ http://thekitchenadventurer.com/$1 [R=301,L]
 </IfModule>
 
-ServerName thekitchenadventurer.com
-ServerAlias www.thekitchenadventurer.com
-
 # END WordPress
