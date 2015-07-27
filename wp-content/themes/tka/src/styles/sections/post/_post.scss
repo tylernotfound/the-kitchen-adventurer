@@ -20,6 +20,24 @@
   }
 }
 
+.post-heading {
+  @extend .beta;
+  margin: 36px 0 16px;
+  font-size: 17px;
+  font-weight: 600;
+  color: #000;
+}
+
+.bulleted {
+  margin-left: 25px;
+  list-style: outside circle;
+
+  li {
+    margin-bottom: 7px;
+    line-height: 1.6;
+  }
+}
+
 
 /* Post Share
 ------------------------------------ */
