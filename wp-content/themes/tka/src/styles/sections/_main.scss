@@ -36,7 +36,7 @@ body {
 
   @include breakpoint('max-only') {
     body.single & {
-      margin-left: 0;
+      margin-left: 100px;
     }
   }
 

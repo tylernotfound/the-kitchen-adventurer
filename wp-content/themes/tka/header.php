@@ -31,7 +31,7 @@
 
     <nav class="navigation" role="navigation">
       <ul class="primary-nav nav delta">
-        <li class="nav__item primary-nav__home"><a data-pjax href="/">Home</a></li>
+        <li class="nav__item primary-nav__home"><a data-pjax href="/">Recipes</a></li>
         <li class="nav__item"><a data-pjax href="/about">About</a></li>
       </ul>
 
