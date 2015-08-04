@@ -162,7 +162,7 @@
 }
 
 .comment-reply-link {
-  @extend .colorize-bg;
+  @extend .colorize-bg-alt;
   padding: 3px;
   font-family: $sans-family;
   font-size: 11px;

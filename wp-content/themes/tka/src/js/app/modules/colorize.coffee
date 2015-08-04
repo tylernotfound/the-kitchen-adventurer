@@ -8,7 +8,7 @@ do ($ = jQuery, App) ->
 
   App.modules.Colorize =
     init: ->
-      @colorsCount = 8
+      @colorsCount = 7
       @currentColorId = parseInt(App.$body.attr('data-color'), 10)
 
       setInterval @updateColor, 15000

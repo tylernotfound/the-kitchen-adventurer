@@ -15,7 +15,7 @@
   <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/dist/css/styles.min.css">
 </head>
 <?php endif; ?>
-<body <?php body_class(); ?> data-color="<?php print rand(1,8); ?>">
+<body <?php body_class(); ?> data-color="<?php print rand(1,7); ?>">
 
   <div id="fb-root"></div>
   <script>(function(d, s, id) {

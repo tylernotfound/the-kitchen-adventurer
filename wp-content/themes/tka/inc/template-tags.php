@@ -58,7 +58,7 @@ function tka_the_post_navigation() {
         <div class="vcenter">
           <div class="vcenter__inner">
             <p class="zeta">Previous Recipe</p>
-            <h6 class="alpha"><a data-pjax href="<?php echo get_permalink( $previous->ID ); ?>"><?php echo get_the_title( $previous->ID ); ?></a></h6>
+            <h6 class="alpha"><a data-pjax class="colorize-text" href="<?php echo get_permalink( $previous->ID ); ?>"><?php echo get_the_title( $previous->ID ); ?></a></h6>
           </div>
         </div>
         <!-- <p class="zeta">You're at the start!</p> -->
@@ -72,7 +72,7 @@ function tka_the_post_navigation() {
         <div class="vcenter">
           <div class="vcenter__inner">
             <p class="zeta">Next Recipe</p>
-            <h6 class="alpha"><a data-pjax href="<?php echo get_permalink( $next->ID ); ?>"><?php echo get_the_title( $next->ID ); ?></a></h6>
+            <h6 class="alpha"><a data-pjax class="colorize-text" href="<?php echo get_permalink( $next->ID ); ?>"><?php echo get_the_title( $next->ID ); ?></a></h6>
           </div>
         </div>
         <!-- <p class="zeta">You're at the latest!</p> -->

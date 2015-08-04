@@ -21,7 +21,7 @@ body {
 .main {
   padding-top: 30px;
   padding-bottom: 60px;
-  transition: opacity .3s ease;
+  transition: opacity .15s ease;
 
   @include breakpoint('mobile-up') {
     padding-top: 70px;

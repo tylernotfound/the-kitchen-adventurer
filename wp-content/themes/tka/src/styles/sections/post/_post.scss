@@ -18,6 +18,10 @@
     margin: 0 0 24px;
     font-size: 18px;
   }
+
+  a {
+    @extend .colorize-text;
+  }
 }
 
 .post-heading {
