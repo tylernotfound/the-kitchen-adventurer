@@ -8,6 +8,18 @@
   text-align: center;
 }
 
+
+.bulleted {
+  margin-left: 25px;
+  list-style: outside circle;
+
+  li {
+    margin-bottom: 7px;
+    font-size: 18px;
+    line-height: 1.6;
+  }
+}
+
 .entry-content {
   img {
     width: 100%;
@@ -22,6 +34,10 @@
   a {
     @extend .colorize-text;
   }
+
+  .bulleted {
+    margin-bottom: 24px;
+  }
 }
 
 .post-heading {
@@ -30,16 +46,6 @@
   font-size: 17px;
   font-weight: 600;
   color: #000;
-}
-
-.bulleted {
-  margin-left: 25px;
-  list-style: outside circle;
-
-  li {
-    margin-bottom: 7px;
-    line-height: 1.6;
-  }
 }
 
 
