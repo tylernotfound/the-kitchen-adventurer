@@ -30,6 +30,9 @@ do ($ = jQuery, App) ->
 
       return if P.processing
 
+      # If user is attempting to open in a new tab, do nothing
+      return if e.metaKey or e.ctrlKey
+
       App.ee.emitEvent 'pjax:start'
 
       # Manually triggering pjax clicks
