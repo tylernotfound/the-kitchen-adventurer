@@ -73,7 +73,7 @@ endif;
 
 // define the wpseo_opengraph_title callback
 function filter_wpseo_opengraph_title($title) {
-  if ( is_singular() ) {
+  if (!is_page()) {
     return str_replace('- The Kitchen Adventurer', '', $title);
   } else {
     return $title;
