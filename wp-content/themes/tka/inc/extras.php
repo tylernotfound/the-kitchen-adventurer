@@ -82,3 +82,4 @@ function filter_wpseo_opengraph_title($title) {
 
 // add the filter
 add_filter( 'wpseo_opengraph_title', 'filter_wpseo_opengraph_title', 10, 1 );
+add_filter( 'wpseo_twitter_title', 'filter_wpseo_opengraph_title', 10, 1 );
