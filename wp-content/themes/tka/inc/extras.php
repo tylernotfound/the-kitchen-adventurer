@@ -73,7 +73,11 @@ endif;
 
 // define the wpseo_opengraph_title callback
 function filter_wpseo_opengraph_title($title) {
-  return str_replace('- The Kitchen Adventurer', '', $title);
+  if ( is_singular() ) {
+    return str_replace('- The Kitchen Adventurer', '', $title);
+  } else {
+    return $title;
+  }
 };
 
 // add the filter
