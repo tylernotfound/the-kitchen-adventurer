@@ -69,3 +69,12 @@ if ( version_compare( $GLOBALS['wp_version'], '4.1', '<' ) ) :
 	}
 	add_action( 'wp_head', 'tka_render_title' );
 endif;
+
+
+// define the wpseo_opengraph_title callback
+function filter_wpseo_opengraph_title($title) {
+  return str_replace('- The Kitchen Adventurer', '', $title);
+};
+
+// add the filter
+add_filter( 'wpseo_opengraph_title', 'filter_wpseo_opengraph_title', 10, 1 );
