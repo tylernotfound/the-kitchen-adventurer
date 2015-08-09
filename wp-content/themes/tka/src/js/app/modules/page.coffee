@@ -12,7 +12,7 @@ do ($ = jQuery, App) ->
       @activeMsnry = null
 
       # Perform initial loading event
-      @onInitialLoad()
+      setTimeout @onInitialLoad.bind(@), 150
 
       # Listen for page events
       App.ee.addListener 'pjax:start', @onPjaxStart.bind(@)
@@ -22,18 +22,18 @@ do ($ = jQuery, App) ->
       return
 
     onInitialLoad: ->
-      @container.imagesLoaded =>
-        # Check for masonry targets
-        $el = @container.find('.js-msnry')
-        if $el.length > 0
-          @activeMsnry = $el
-          @activeMsnry.masonry
-            gutter: '.gutter-sizer'
-            columnWidth: '.grid-sizer'
-            itemSelector: '.card'
+      # @container.imagesLoaded =>
+      # Check for masonry targets
+      $el = @container.find('.js-msnry')
+      if $el.length > 0
+        @activeMsnry = $el
+        @activeMsnry.masonry
+          gutter: '.gutter-sizer'
+          columnWidth: '.grid-sizer'
+          itemSelector: '.card'
 
-        # Bring container back in
-        @container.removeClass 'is-loading'
+      # Bring container back in
+      @container.removeClass 'is-loading'
 
 
     onPjaxStart: ->
@@ -56,25 +56,24 @@ do ($ = jQuery, App) ->
 
 
     onPjaxSuccess: ->
-      @container.imagesLoaded =>
-        # Check for social
-        if @container.find('.post-share').length > 0
-          FB?.XFBML.parse()
-          twttr?.widgets.load()
-          parsePinBtns?()
+      # @container.imagesLoaded =>
+      # Check for social
+      if @container.find('.post-share').length > 0
+        FB?.XFBML.parse()
+        twttr?.widgets.load()
+        parsePinBtns?()
 
-        # Check for masonry targets
-        $el = @container.find('.js-msnry')
-        if $el.length > 0
-          @activeMsnry = $el
-          @activeMsnry.masonry
-            gutter: '.gutter-sizer'
-            columnWidth: '.grid-sizer'
-            itemSelector: '.card'
+      # Check for masonry targets
+      $el = @container.find('.js-msnry')
+      if $el.length > 0
+        @activeMsnry = $el
+        @activeMsnry.masonry
+          gutter: '.gutter-sizer'
+          columnWidth: '.grid-sizer'
+          itemSelector: '.card'
 
-        # Bring container back in
-        @container.removeClass 'is-loading'
+      # Bring container back in
+      @container.removeClass 'is-loading'
 
-        return
       return
 
