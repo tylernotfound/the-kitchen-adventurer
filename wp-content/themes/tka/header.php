@@ -38,6 +38,7 @@
       <!-- TODO: About Blurb -->
 
       <ul class="social-nav nav">
+        <li class="nav__item"><a class="ss-icon" href="https://www.facebook.com/TheKitchenAdventurer" target="_blank">Facebook</a></li>
         <li class="nav__item"><a class="ss-icon" href="https://instagram.com/thekitchenadventurer/" target="_blank">Instagram</a></li>
         <li class="nav__item"><a class="ss-icon" href="https://pinterest.com/thekitchenadv/" target="_blank">Pinterest</a></li>
       </ul>
