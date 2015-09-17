@@ -2,7 +2,7 @@ module.exports =
 
   js:
     files: ['src/js/**/*.{js,coffee}']
-    tasks: ['buildJS']
+    tasks: ['buildJSProd']
     options:
       spawn: false
 

@@ -1,18 +1,28 @@
 default:
-  - 'clean:dev'
+  - 'clean'
   - 'buildCSS'
-  - 'buildJS'
+  - 'buildJSProd'
   - 'watch'
+
+dev:
+  - 'clean'
+  - 'buildCSS'
+  - 'buildJSDev'
 
 buildCSS:
   - 'scsslint'
   - 'compass'
   - 'autoprefixer'
 
-buildJS:
+buildJSDev:
   - 'coffeelint'
   - 'coffee:compile'
   - 'sync:source'
   - 'concat:dev'
-  # - 'concat'
-  # - 'uglify'
+
+buildJSProd:
+  - 'coffeelint'
+  - 'coffee:compile'
+  - 'sync:source'
+  - 'concat'
+  - 'uglify'
