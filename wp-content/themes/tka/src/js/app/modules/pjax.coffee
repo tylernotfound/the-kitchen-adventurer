@@ -64,6 +64,10 @@ do ($ = jQuery, App) ->
 
     # onSuccess: (data, status, xhr, options) ->
     onEnd: (data, status, xhr, options) ->
+      # Trigger GA pageview event
+      ga('set', 'location', window.location.href)
+      ga('send', 'pageview')
+
       App.modules.PJAX.processing = false
       App.ee.emitEvent 'pjax:success'
 
