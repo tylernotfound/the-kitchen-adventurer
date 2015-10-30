@@ -87,12 +87,10 @@ a {
 .link-hover,
 .entry-content a {
   display: inline-block;
-  // padding-bottom: 1px;
-  border-bottom: 1px solid #fff;
+  border-bottom: 1px solid transparent;
   transition: color $colorize-timing ease, border-color .2s ease;
 
   &:hover {
-    padding-bottom: 0;
     border-bottom-color: inherit;
   }
 }
