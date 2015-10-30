@@ -23,12 +23,8 @@
 .grid-sizer {
   width: 100%;
 
-  @include breakpoint('mobile-only') {
-    width: 48%;
-  }
-
   @include breakpoint('tablet-up') {
-    width: 32%;
+    width: 48%;
   }
 
   @include breakpoint('desktop-up') {
@@ -64,25 +60,8 @@
   margin-bottom: 30px;
   box-shadow: 0 1px 1px #e7e7e7;
 
-  // @include breakpoint('tablet-up') {
-  //   // width: 32%;
-  //   width: 46%;
-  //   margin-bottom: 4%;
-  // }
-
-  // @include breakpoint('widescreen-up') {
-  //   width: 32%;
-  //   margin-bottom: 2%;
-
-  // }
-
-  @include breakpoint('mobile-only') {
-    width: 48%;
-    margin-bottom: 4%;
-  }
-
   @include breakpoint('tablet-up') {
-    width: 32%;
+    width: 48%;
     margin-bottom: 2%;
   }
 

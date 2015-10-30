@@ -9,12 +9,13 @@
 
 ?>
 
-
     <div class="page-foot">
+      <a class="cookie-swap" href="http://www.fbcookieswap.com" target="_blank"><img src="http://i.imgsafe.org/b1667bc.png" border="0" alt="The Great Food Blogger Cookie Swap 2015"></a>
       <p class="copyright"><small>&copy; 2015 The Kitchen Adventurer. All rights reserved.</small></p>
     </div>
 
   </main><!-- #main -->
+
 
 <?php if (!is_pjax()) : ?>
   <?php wp_footer(); ?>

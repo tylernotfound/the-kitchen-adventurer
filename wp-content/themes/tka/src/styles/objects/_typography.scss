@@ -80,9 +80,21 @@ h5,
 /* Links
 ------------------------------------ */
 a {
-  // @extend .colorize-text;
   text-decoration: none;
   color: $color-link;
+}
+
+.link-hover,
+.entry-content a {
+  display: inline-block;
+  // padding-bottom: 1px;
+  border-bottom: 1px solid #fff;
+  transition: color $colorize-timing ease, border-color .2s ease;
+
+  &:hover {
+    padding-bottom: 0;
+    border-bottom-color: inherit;
+  }
 }
 
 .block-link {

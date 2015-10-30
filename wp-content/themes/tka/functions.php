@@ -116,7 +116,7 @@ add_filter('next_posts_link_attributes', 'posts_link_attributes');
 add_filter('previous_posts_link_attributes', 'posts_link_attributes');
 
 function posts_link_attributes() {
-    return 'class="btn"';
+    return 'data-pjax class="btn"';
 }
 
 
@@ -126,7 +126,7 @@ function posts_link_attributes() {
 add_filter('the_category','add_pjax_to_category',10,1);
 
 function add_pjax_to_category( $thelist){
-  return str_replace('<a href="', '<a data-pjax class="colorize-text" href="', $thelist);
+  return str_replace('<a href="', '<a data-pjax class="colorize-text link-hover" href="', $thelist);
 }
 
 

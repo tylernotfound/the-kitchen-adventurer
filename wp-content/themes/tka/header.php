@@ -39,12 +39,20 @@
       <!-- TODO: About Blurb -->
 
       <ul class="social-nav nav">
-        <li class="nav__item"><a class="ss-icon" href="https://www.facebook.com/TheKitchenAdventurer" target="_blank">Facebook</a></li>
-        <li class="nav__item"><a class="ss-icon" href="https://instagram.com/thekitchenadventurer/" target="_blank">Instagram</a></li>
-        <li class="nav__item"><a class="ss-icon" href="https://pinterest.com/thekitchenadv/" target="_blank">Pinterest</a></li>
+        <li class="nav__item nav__item--facebook">
+          <a class="ss-icon" href="https://www.facebook.com/TheKitchenAdventurer" target="_blank">Facebook</a>
+        </li>
+        <li class="nav__item nav__item--instagram">
+          <a class="ss-icon" href="https://instagram.com/thekitchenadventurer/" target="_blank">Instagram</a>
+        </li>
+        <li class="nav__item nav__item--pinterest">
+          <a class="ss-icon" href="https://pinterest.com/thekitchenadv/" target="_blank">Pinterest</a>
+        </li>
       </ul>
     </nav>
   </header>
+
+  <a class="cookie-swap" href="http://www.fbcookieswap.com" target="_blank"><img src="http://i.imgsafe.org/b1667bc.png" border="0" alt="The Great Food Blogger Cookie Swap 2015"></a>
 
   <main id="main" class="main <?php if (!is_pjax()) { print 'is-loading'; }  ?>" role="main">
     <span id="pjax-helper" data-bc='<?php body_class(); ?>' data-title="<?php print wp_title('|', true, 'right'); ?>" style="display: none;"></span>

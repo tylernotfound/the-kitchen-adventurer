@@ -30,13 +30,20 @@
 
   @include breakpoint('mobile-up') {
     position: absolute;
-    top: 0;
+    top: -6px;
     left: 0;
+    padding: 29px 34px 23px;
+    transition: background $colorize-timing ease, transform .2s ease;
+
+    &:hover {
+      transform: translate(0, 6px);
+    }
   }
 
   @include breakpoint('desktop-up') {
-    position: static;
-    padding: 26px 40px;
+    position: relative;
+    top: -6px;
+    padding: 32px 40px 26px;
   }
 
   img {
@@ -82,9 +89,14 @@
     margin-left: 0;
   }
 
-  // scss-lint:disable ImportantRule
   a {
-    color: #555 !important;
+    color: #555;
+  }
+
+  &:hover {
+    a {
+      text-decoration: none;
+    }
   }
 }
 
@@ -112,6 +124,15 @@
       margin: 0 0 28px;
     }
   }
+
+  a {
+    border-bottom: 1px solid #fff;
+    transition: border .2s ease;
+
+    &:hover {
+      border-bottom-color: inherit;
+    }
+  }
 }
 
 .primary-nav__home {
@@ -126,15 +147,48 @@
 /* Social Nav
 ------------------------------------ */
 .social-nav {
+  position: relative;
+
   .nav__item {
     margin-left: 20px;
+    color: #555;
+    transition: all .2s ease;
 
     &:first-child {
       margin-left: 0;
     }
+
+  }
+
+  a {
+    color: inherit;
   }
 }
 
+.nav__item--facebook {
+  &:hover {
+    color: #3b5998;
+    transform: scale(1.1);
+  }
+}
+
+.nav__item--instagram {
+  &:hover {
+    color: #9b6954;
+    transform: scale(1.1);
+  }
+}
+
+.nav__item--pinterest {
+  &:hover {
+    transform: scale(1.1);
+    color: #cb2027;
+  }
+}
+
+
+/* More Posts
+------------------------------------ */
 .more-posts {
   margin: 40px 0 0;
   text-align: center;
@@ -145,5 +199,22 @@
     &:first-child {
       margin: 0;
     }
+  }
+}
+
+
+/* Cookie Swap
+------------------------------------ */
+.cookie-swap {
+  display: none;
+  width: 130px;
+  margin: 0 auto 20px;
+
+  @include breakpoint('desktop-up') {
+    display: block;
+    position: fixed;
+    bottom: 25px;
+    left: 44px;
+    margin: 0;
   }
 }
