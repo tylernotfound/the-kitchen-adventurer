@@ -126,6 +126,8 @@
   }
 
   a {
+    display: inline-block;
+    padding-bottom: 4px;
     border-bottom: 1px solid transparent;
     transition: border .2s ease;
 
