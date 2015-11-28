@@ -4,16 +4,14 @@
 
 .page-foot {
   margin: 80px 0 0;
+}
 
-  @include breakpoint('desktop-up') {
-    .cookie-swap {
-      display: none;
-    }
-  }
-
-  .cookie-swap {
-    display: block;
-  }
+/* Cookie Swap
+------------------------------------ */
+.cookie-swap {
+  display: block;
+  width: 130px;
+  margin: 0 auto 20px;
 }
 
 

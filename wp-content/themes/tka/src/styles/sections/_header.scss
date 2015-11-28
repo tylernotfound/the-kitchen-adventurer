@@ -204,19 +204,3 @@
   }
 }
 
-
-/* Cookie Swap
------------------------------------- */
-.cookie-swap {
-  display: none;
-  width: 130px;
-  margin: 0 auto 20px;
-
-  @include breakpoint('desktop-up') {
-    display: block;
-    position: fixed;
-    bottom: 25px;
-    left: 44px;
-    margin: 0;
-  }
-}
