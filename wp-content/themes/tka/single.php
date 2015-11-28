@@ -22,13 +22,10 @@ get_header(); ?>
           Tell all your friends!
         </div>
         <div class="post-share__item">
-          <a href="https://twitter.com/share" class="twitter-share-button" data-url="<?php print $post_url; ?>" data-text="<?php print $post_title; ?>" data-via="thekitchenadv">Tweet</a>
-        </div>
-        <div class="post-share__item">
-          <div class="fb-like" data-href="<?php print $post_url; ?>" data-layout="button_count" data-action="like" data-share="true"></div>
-        </div>
-        <div class="post-share__item">
           <a href="//www.pinterest.com/pin/create/button/?url=<?php print urlencode($post_url); ?>&media=<?php print urlencode(the_field('share_image')); ?>&description=<?php print urlencode($post_title); ?>" data-pin-do="buttonPin" data-pin-config="beside" data-pin-color="red"><img src="//assets.pinterest.com/images/pidgets/pinit_fg_en_rect_red_20.png" /></a>
+        </div>
+        <div class="post-share__item">
+          <a href="//yummly.com" class="YUMMLY-YUM-BUTTON">Yum</a>
         </div>
       </nav>
     </div>
