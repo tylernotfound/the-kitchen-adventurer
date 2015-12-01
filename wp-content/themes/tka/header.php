@@ -52,7 +52,5 @@
     </nav>
   </header>
 
-  <!-- <a class="cookie-swap" href="http://www.fbcookieswap.com" target="_blank"><img src="http://i.imgsafe.org/b1667bc.png" border="0" alt="The Great Food Blogger Cookie Swap 2015"></a> -->
-
   <main id="main" class="main <?php if (!is_pjax()) { print 'is-loading'; }  ?>" role="main">
     <span id="pjax-helper" data-bc='<?php body_class(); ?>' data-title="<?php print wp_title('|', true, 'right'); ?>" style="display: none;"></span>
