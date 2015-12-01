@@ -54,7 +54,7 @@ function tka_the_post_navigation() {
     <?php if ($previous): ?>
       <div class="post-nav__item post-nav__previous">
         <a data-pjax href="<?php echo get_permalink( $previous->ID ); ?>" class="block-link"></a>
-        <img class="post-nav__photo" src="<?php echo get_field('thumbnail', $previous->ID); ?>" alt="">
+        <img data-pin-nopin="true" class="post-nav__photo" src="<?php echo get_field('thumbnail', $previous->ID); ?>" alt="">
         <div class="vcenter">
           <div class="vcenter__inner">
             <p class="zeta">Previous Recipe</p>
@@ -68,7 +68,7 @@ function tka_the_post_navigation() {
     <?php if ($next): ?>
       <div class="post-nav__item post-nav__next">
         <a data-pjax href="<?php echo get_permalink( $next->ID ); ?>" class="block-link"></a>
-        <img class="post-nav__photo" src="<?php echo get_field('thumbnail', $next->ID); ?>" alt="">
+        <img data-pin-nopin="true" class="post-nav__photo" src="<?php echo get_field('thumbnail', $next->ID); ?>" alt="">
         <div class="vcenter">
           <div class="vcenter__inner">
             <p class="zeta">Next Recipe</p>
