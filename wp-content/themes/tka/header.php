@@ -28,7 +28,7 @@
   }(document, 'script', 'facebook-jssdk'));</script>
 
   <header class="page-head container">
-    <a data-pjax class="logo colorize-bg" href="/" title="The Kitchen Adventurer"><img src="<?php echo get_template_directory_uri(); ?>/img/logo.png" width="58" height="31" alt="The Kitchen Adventurer"></a>
+    <a data-pjax class="logo colorize-bg" href="/" title="The Kitchen Adventurer"><img data-pin-nopin="true" src="<?php echo get_template_directory_uri(); ?>/img/logo.png" width="58" height="31" alt="The Kitchen Adventurer"></a>
 
     <nav class="navigation" role="navigation">
       <ul class="primary-nav nav delta">
