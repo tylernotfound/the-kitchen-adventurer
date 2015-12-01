@@ -2,7 +2,6 @@ js_pipeline = [
   # Bower dependencies
   'bower_components/eventEmitter/EventEmitter.js'
   'bower_components/jQuery/dist/jquery.js'
-  'bower_components/jquery-pjax/jquery.pjax.js'
   'bower_components/imagesloaded/imagesloaded.pkgd.js'
   'bower_components/masonry/dist/masonry.pkgd.js'
   'bower_components/fastclick/lib/fastclick.js'
