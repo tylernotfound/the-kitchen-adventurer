@@ -33,9 +33,6 @@
     ga('send', 'pageview');
   </script>
 
-  <!-- Yummly -->
-  <script src="https://www.yummly.com/js/widget.js?wordpress"></script>
-
   <!-- Pinterest -->
   <script type="text/javascript" src="//assets.pinterest.com/js/pinit.js" data-pin-hover="true" data-pin-build="parsePinBtns"></script>
 </body>
