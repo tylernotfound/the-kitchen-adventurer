@@ -60,7 +60,6 @@ do ($ = jQuery, App) ->
       # Check for social
       if @container.find('.post-share').length > 0
         FB?.XFBML.parse()
-        twttr?.widgets.load()
         parsePinBtns?()
 
       # Check for masonry targets

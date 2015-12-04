@@ -20,6 +20,12 @@
   }
 }
 
+.blog-yumprint-serves,
+.blog-yumprint-info-bar,
+.blog-yumprint-info-box {
+  @extend %vh;
+}
+
 .blog-yumprint-ingredient-section {
   margin: 0 0 30px;
 
